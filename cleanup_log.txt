@@ -97,3 +97,64 @@
 [2026-08-16 07:11:23] [SUCESSO] ✅ LIMPEZA CONCLUÍDA!
 [2026-08-16 07:11:23] [SUCESSO] 💾 Total liberado: 0.0 MB
 [2026-08-16 07:11:23] [INFO] ==================================================
+[2026-08-16 07:17:02] [INFO] ✦ Cleanup Manager iniciado
+[2026-08-16 07:17:02] [INFO] ✦ Pasta: e:\cleanup_manager.py
+[2026-08-16 07:17:02] [INFO] ✦ Sistema: Windows
+[2026-08-16 07:17:02] [INFO] ✦ Venv: Ativo
+[2026-08-16 07:17:02] [INFO] ║║║║║║║║║║║║║║║║║║║║║║║║║║║║║║
+[2026-08-16 07:17:02] [INFO] ✦ Pronto! Clique em 'Iniciar Limpeza Completa'
+[2026-08-16 07:17:09] [LIMPEZA] ◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆
+[2026-08-16 07:17:09] [LIMPEZA] 🚀 INICIANDO LIMPEZA COMPLETA
+[2026-08-16 07:17:09] [LIMPEZA] ◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆
+[2026-08-16 07:17:09] [INFO] 
+📁 1. Temporários...
+[2026-08-16 07:17:09] [INFO] Iniciando limpeza de temporários...
+[2026-08-16 07:17:09] [INFO]   Temp do usuário: 21.7 MB
+[2026-08-16 07:17:09] [SUCESSO]     ✓ Liberado: 0.0 MB
+[2026-08-16 07:17:09] [INFO]   Temp do Windows: 0.0 MB
+[2026-08-16 07:17:09] [SUCESSO]     ✓ Liberado: 0.0 MB
+[2026-08-16 07:17:09] [SUCESSO] Total: 0.0 MB
+[2026-08-16 07:17:09] [INFO] 
+📁 2. Caches...
+[2026-08-16 07:17:09] [INFO] Iniciando limpeza de caches...
+[2026-08-16 07:17:09] [INFO]   Prefetch: 0.0 MB
+[2026-08-16 07:17:09] [SUCESSO]     ✓ Liberado: 0.0 MB
+[2026-08-16 07:17:09] [SUCESSO] Total: 0.0 MB
+[2026-08-16 07:17:09] [INFO] 
+📁 3. Lixeira...
+[2026-08-16 07:17:09] [INFO] Esvaziando lixeira...
+[2026-08-16 07:17:09] [SUCESSO] ✓ Lixeira esvaziada!
+[2026-08-16 07:17:09] [INFO] 
+📁 4. Pip cache...
+[2026-08-16 07:17:09] [INFO] Limpando cache do pip...
+[2026-08-16 07:17:10] [SUCESSO] ✓ Cache do pip limpo!
+[2026-08-16 07:17:10] [SUCESSO] ✓ Removidos 59 __pycache__
+[2026-08-16 07:17:10] [INFO] 
+📁 5. Removendo pacotes...
+[2026-08-16 07:17:10] [INFO] Removendo pacotes não usados...
+[2026-08-16 07:17:10] [INFO]   Removendo: customtkinter
+[2026-08-16 07:17:11] [INFO]   Removendo: darkdetect
+[2026-08-16 07:17:12] [INFO]   Removendo: packaging
+[2026-08-16 07:17:12] [INFO]   Removendo: pillow
+[2026-08-16 07:17:16] [SUCESSO] ✓ Removidos 4 pacotes!
+[2026-08-16 07:17:16] [INFO] 
+📁 6. Downloads...
+[2026-08-16 07:17:16] [INFO] Removendo arquivos com mais de 30 dias...
+[2026-08-16 07:17:16] [SUCESSO] ✓ 0 arquivos (0.0 MB)
+[2026-08-16 07:17:16] [LIMPEZA] 
+◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆
+[2026-08-16 07:17:16] [SUCESSO] ✓ LIMPEZA CONCLUÍDA!
+[2026-08-16 07:17:16] [SUCESSO] ✦ Espaço liberado: 0.0 MB
+[2026-08-16 07:17:16] [LIMPEZA] ◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆◆
+[2026-08-16 07:17:37] [INFO] Esvaziando lixeira...
+[2026-08-16 07:17:37] [SUCESSO] ✓ Lixeira esvaziada!
+[2026-08-16 07:17:40] [INFO] Iniciando limpeza de caches...
+[2026-08-16 07:17:40] [INFO]   Prefetch: 0.0 MB
+[2026-08-16 07:17:40] [SUCESSO]     ✓ Liberado: 0.0 MB
+[2026-08-16 07:17:40] [SUCESSO] Total: 0.0 MB
+[2026-08-16 07:17:43] [INFO] Iniciando limpeza de temporários...
+[2026-08-16 07:17:43] [INFO]   Temp do usuário: 21.7 MB
+[2026-08-16 07:17:43] [SUCESSO]     ✓ Liberado: 0.0 MB
+[2026-08-16 07:17:43] [INFO]   Temp do Windows: 0.0 MB
+[2026-08-16 07:17:43] [SUCESSO]     ✓ Liberado: 0.0 MB
+[2026-08-16 07:17:43] [SUCESSO] Total: 0.0 MB

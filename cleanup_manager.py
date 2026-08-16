@@ -1,8 +1,4 @@
 #!/usr/bin/env python3
-"""
-Cleanup Manager - Tema Neon Pastel
-Para programadores que amam estilo escuro com cores vibrantes
-"""
 
 import json
 import os
