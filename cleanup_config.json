@@ -20,5 +20,12 @@
     "env"
   ],
   "ultima_limpeza": null,
-  "versao": "3.0"
+  "versao": "3.0",
+  "modo_agressivo": true,
+  "limpar_cache_pip": true,
+  "remover_arquivos_temp": true,
+  "esvaziar_lixeira": true,
+  "limpar_prefetch": true,
+  "remover_pontos_restauracao": false,
+  "remover_pacotes_nao_usados": true
 }
