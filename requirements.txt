@@ -1,9 +1,22 @@
-# requirements.txt - Dependências para o Cleanup Manager
+# requirements.txt - Dependências do Cleanup Manager com GUI
+# Versão: 5.0 - Interface Gráfica
+# Data: 2026-08-16
 
-# Nenhuma dependência externa é necessária!
-# O programa usa apenas bibliotecas padrão do Python:
-# - os, sys, subprocess, shutil, glob, pathlib
-# - json, datetime, platform
+# ============================================
+# Interface Gráfica (Obrigatório)
+# ============================================
+customtkinter>=5.2.0
+pillow>=10.0.0
 
-# Recomendado para melhor experiência:
-pip-autoremove>=1.0.0  # Para remoção inteligente de dependências
+# ============================================
+# Utilitários (Opcional - já vem com Python)
+# ============================================
+# Estas bibliotecas já vem com o Python:
+# - os, sys, subprocess, shutil, json, threading
+# - datetime, pathlib, platform, re, glob
+# - tkinter (já vem com Python)
+
+# ============================================
+# Para melhor gerenciamento de pacotes (Opcional)
+# ============================================
+# pip-autoremove>=1.0.0  # Para remoção inteligente de dependências
