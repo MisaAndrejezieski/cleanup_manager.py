@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-Cleanup Manager - Sem frescura, só funciona
+Cleanup Manager - Limpeza Automatizada
 """
 
 import json
@@ -14,7 +14,7 @@ from datetime import datetime
 from pathlib import Path
 
 # ============================================
-# 1. VERIFICA SE ESTÁ NO .VENV (só avisa, não ativa)
+# VERIFICA .VENV
 # ============================================
 
 in_venv = hasattr(sys, 'real_prefix') or (hasattr(sys, 'base_prefix') and sys.base_prefix != sys.prefix)
@@ -26,11 +26,10 @@ if not in_venv:
     sys.exit(1)
 
 # ============================================
-# 2. VERIFICA E INSTALA O QUE FALTA
+# INSTALA DEPENDÊNCIAS
 # ============================================
 
-def instalar_se_faltar():
-    """Instala apenas o que não está instalado"""
+def instalar_dependencias():
     dependencias = ['customtkinter', 'pillow']
     faltando = []
     
@@ -46,10 +45,10 @@ def instalar_se_faltar():
             subprocess.run([sys.executable, "-m", "pip", "install", dep], check=True)
         print("✅ Dependências instaladas!")
 
-instalar_se_faltar()
+instalar_dependencias()
 
 # ============================================
-# 3. IMPORTA E RODA
+# IMPORTA
 # ============================================
 
 from tkinter import messagebox, scrolledtext
@@ -79,7 +78,7 @@ CORES = {
 }
 
 # ============================================
-# CLASSE
+# CLASSE PRINCIPAL
 # ============================================
 
 class CleanupManagerGUI:
@@ -135,8 +134,6 @@ class CleanupManagerGUI:
     def log(self, msg, tipo="INFO"):
         timestamp = datetime.now().strftime("%H:%M:%S")
         emojis = {"SUCESSO": "✓", "ERRO": "✗", "AVISO": "⚠", "INFO": "•", "LIMPEZA": "◆"}
-        cores = {"SUCESSO": CORES['sucesso'], "ERRO": CORES['erro'], 
-                 "AVISO": CORES['aviso'], "INFO": CORES['info'], "LIMPEZA": CORES['neon_rosa']}
         
         log_msg = f"[{timestamp}] {emojis.get(tipo, '')} {msg}\n"
         
@@ -237,31 +234,32 @@ class CleanupManagerGUI:
         pip = os.path.join(self.venv_local, 'Scripts', 'pip.exe') if self.is_windows else os.path.join(self.venv_local, 'bin', 'pip')
         if not os.path.exists(pip):
             return
-        self.log("Removendo pacotes não usados...", "INFO")
-        try:
-            # Lê o requirements.txt
-            req_file = os.path.join(self.diretorio_projeto, 'requirements.txt')
-            if os.path.exists(req_file):
-                with open(req_file, 'r') as f:
-                    reqs = [l.strip().split('=')[0].lower() for l in f if l.strip() and not l.startswith('#')]
-            else:
-                reqs = []
+        
+        self.log("Removendo pacotes fora do requirements.txt...", "INFO")
+        
+        req_file = os.path.join(self.diretorio_projeto, 'requirements.txt')
+        if not os.path.exists(req_file):
+            self.log("❌ requirements.txt não encontrado!", "ERRO")
+            return
+        
+        with open(req_file, 'r') as f:
+            reqs = [l.strip().split('=')[0].split('>')[0].split('<')[0].strip().lower() 
+                    for l in f if l.strip() and not l.startswith('#')]
+        
+        stdout, _ = subprocess.Popen(f'"{pip}" list --format=json', shell=True, stdout=subprocess.PIPE, text=True).communicate()
+        if stdout:
+            pacotes = json.loads(stdout)
+            protegidos = ['pip', 'setuptools', 'wheel', 'virtualenv']
+            removidos = 0
             
-            # Lista pacotes instalados
-            stdout, _ = subprocess.Popen(f'"{pip}" list --format=json', shell=True, stdout=subprocess.PIPE, text=True).communicate()
-            if stdout:
-                pacotes = json.loads(stdout)
-                protegidos = ['pip', 'setuptools', 'wheel', 'virtualenv']
-                removidos = 0
-                for p in pacotes:
-                    nome = p['name'].lower()
-                    if nome not in reqs and nome not in protegidos:
-                        self.log(f"  Removendo: {p['name']}", "INFO")
-                        subprocess.run(f'"{pip}" uninstall {p["name"]} -y', shell=True)
-                        removidos += 1
-                self.log(f"Removidos {removidos} pacotes!", "SUCESSO")
-        except Exception as e:
-            self.log(f"Erro: {e}", "ERRO")
+            for p in pacotes:
+                nome = p['name'].lower()
+                if nome not in reqs and nome not in protegidos:
+                    self.log(f"  Removendo: {p['name']}", "INFO")
+                    subprocess.run(f'"{pip}" uninstall {p["name"]} -y', shell=True)
+                    removidos += 1
+            
+            self.log(f"✅ Removidos {removidos} pacotes!", "SUCESSO")
     
     def limpar_downloads(self):
         downloads = os.path.expanduser("~/Downloads")
@@ -314,12 +312,12 @@ class CleanupManagerGUI:
                 self.limpar_downloads()
             
             self.log("◆" * 40, "LIMPEZA")
-            self.log(f"✓ LIMPEZA CONCLUÍDA!", "SUCESSO")
+            self.log(f"✅ LIMPEZA CONCLUÍDA!", "SUCESSO")
             self.log(f"Espaço liberado: {self.espaco_liberado:.1f} MB", "SUCESSO")
             self.log("◆" * 40, "LIMPEZA")
             
             self.label_espaco.configure(text=f"✦ {self.espaco_liberado:.1f} MB liberados")
-            messagebox.showinfo("Concluído", f"✓ Limpeza finalizada!\n\n✦ {self.espaco_liberado:.1f} MB liberados")
+            messagebox.showinfo("Concluído", f"✅ Limpeza finalizada!\n\n✦ {self.espaco_liberado:.1f} MB liberados")
             
         except Exception as e:
             self.log(f"Erro: {e}", "ERRO")
@@ -334,11 +332,9 @@ class CleanupManagerGUI:
         self.janela.geometry("950x700")
         self.janela.configure(fg_color=CORES['bg_principal'])
         
-        # Frame principal
         main = ctk.CTkFrame(self.janela, fg_color=CORES['bg_secundario'], corner_radius=15)
         main.pack(fill="both", expand=True, padx=20, pady=20)
         
-        # Header
         header = ctk.CTkFrame(main, fg_color=CORES['bg_terciario'], corner_radius=10, height=70)
         header.pack(fill="x", padx=15, pady=(15, 10))
         header.pack_propagate(False)
@@ -348,7 +344,6 @@ class CleanupManagerGUI:
         ctk.CTkLabel(header, text="Limpeza Automatizada", font=("JetBrains Mono", 12),
                     text_color=CORES['texto_secundario']).pack(side="left", padx=10)
         
-        # Status
         status = ctk.CTkFrame(main, fg_color=CORES['bg_terciario'], corner_radius=8)
         status.pack(fill="x", padx=15, pady=5)
         
@@ -364,7 +359,6 @@ class CleanupManagerGUI:
         self.label_espaco.grid(row=0, column=2, padx=15, pady=8)
         status.grid_columnconfigure(3, weight=1)
         
-        # Botões
         botoes = ctk.CTkFrame(main, fg_color=CORES['bg_terciario'], corner_radius=8)
         botoes.pack(fill="x", padx=15, pady=8)
         
@@ -392,13 +386,11 @@ class CleanupManagerGUI:
         for i in range(6):
             botoes.grid_columnconfigure(i, weight=1)
         
-        # Progress
         self.progress_bar = ctk.CTkProgressBar(main, progress_color=CORES['neon_roxo'], 
                     fg_color=CORES['bg_principal'], height=6, corner_radius=3)
         self.progress_bar.pack(fill="x", padx=15, pady=8)
         self.progress_bar.set(0)
         
-        # Log
         ctk.CTkLabel(main, text="║ LOG ║", font=("JetBrains Mono", 12, "bold"), 
                     text_color=CORES['neon_azul']).pack(pady=(8, 4))
         
@@ -407,14 +399,12 @@ class CleanupManagerGUI:
                     insertbackground=CORES['neon_azul'], relief="flat", height=14, bd=0)
         self.log_text.pack(fill="both", expand=True, padx=15, pady=(0, 8))
         
-        # Tags do log
         self.log_text.tag_config("SUCESSO", foreground=CORES['neon_verde'])
         self.log_text.tag_config("ERRO", foreground=CORES['neon_vermelho'])
         self.log_text.tag_config("AVISO", foreground=CORES['neon_amarelo'])
         self.log_text.tag_config("INFO", foreground=CORES['neon_azul'])
         self.log_text.tag_config("LIMPEZA", foreground=CORES['neon_rosa'])
         
-        # Rodapé
         rodape = ctk.CTkFrame(main, fg_color=CORES['bg_terciario'], corner_radius=8, height=40)
         rodape.pack(fill="x", padx=15, pady=(0, 10))
         rodape.pack_propagate(False)
@@ -485,7 +475,7 @@ class CleanupManagerGUI:
                 pass
             with open(self.config_file, 'w') as f:
                 json.dump(self.config, f, indent=2)
-            messagebox.showinfo("Sucesso", "✓ Configurações salvas!")
+            messagebox.showinfo("Sucesso", "✅ Configurações salvas!")
             janela.destroy()
         
         ctk.CTkButton(btn_frame, text="💾 Salvar", command=salvar, font=("JetBrains Mono", 12, "bold"), height=35,
