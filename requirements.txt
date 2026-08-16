@@ -1,0 +1,9 @@
+# requirements.txt - Dependências para o Cleanup Manager
+
+# Nenhuma dependência externa é necessária!
+# O programa usa apenas bibliotecas padrão do Python:
+# - os, sys, subprocess, shutil, glob, pathlib
+# - json, datetime, platform
+
+# Recomendado para melhor experiência:
+pip-autoremove>=1.0.0  # Para remoção inteligente de dependências
