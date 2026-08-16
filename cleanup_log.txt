@@ -1,0 +1,99 @@
+[2026-08-16 07:10:10] [INFO] 🚀 Cleanup Manager iniciado!
+[2026-08-16 07:10:10] [INFO] Sistema: Windows
+[2026-08-16 07:10:10] [INFO] Administrador: Não
+[2026-08-16 07:10:10] [INFO] Venv ativo: Sim
+[2026-08-16 07:10:10] [INFO] ==================================================
+[2026-08-16 07:10:10] [INFO] Pronto! Clique em 'Iniciar Limpeza Completa'
+[2026-08-16 07:10:42] [INFO] Limpando cache do pip em: e:\cleanup_manager.py\.venv
+[2026-08-16 07:10:43] [SUCESSO] ✅ Cache do pip limpo!
+[2026-08-16 07:10:43] [SUCESSO] ✅ Removidos 67 diretórios __pycache__
+[2026-08-16 07:10:47] [INFO] Removendo pacotes não usados...
+[2026-08-16 07:10:48] [INFO]   Removendo: customtkinter
+[2026-08-16 07:10:49] [INFO]   Removendo: darkdetect
+[2026-08-16 07:10:49] [INFO]   Removendo: packaging
+[2026-08-16 07:10:50] [INFO]   Removendo: pillow
+[2026-08-16 07:10:54] [SUCESSO] ✅ Removidos 4 pacotes!
+[2026-08-16 07:10:57] [INFO] Removendo arquivos com mais de 30 dias da pasta Downloads...
+[2026-08-16 07:10:57] [SUCESSO] ✅ Removidos 0 arquivos (0.0 MB liberados)
+[2026-08-16 07:11:01] [INFO] Iniciando limpeza de caches...
+[2026-08-16 07:11:01] [INFO]   Cache de pré-carregamento: 0.0 MB
+[2026-08-16 07:11:01] [SUCESSO]     ✅ Liberado: 0.0 MB
+[2026-08-16 07:11:01] [SUCESSO] Total liberado em caches: 0.0 MB
+[2026-08-16 07:11:13] [INFO] ==================================================
+[2026-08-16 07:11:13] [LIMPEZA] 🚀 INICIANDO LIMPEZA COMPLETA
+[2026-08-16 07:11:13] [INFO] ==================================================
+[2026-08-16 07:11:13] [INFO] 
+📁 1. Limpando arquivos temporários...
+[2026-08-16 07:11:13] [INFO] Iniciando limpeza de arquivos temporários...
+[2026-08-16 07:11:13] [INFO]   Temp do usuário: 21.7 MB
+[2026-08-16 07:11:13] [SUCESSO]     ✅ Liberado: 0.0 MB
+[2026-08-16 07:11:13] [INFO]   Temp do Windows: 0.0 MB
+[2026-08-16 07:11:13] [SUCESSO]     ✅ Liberado: 0.0 MB
+[2026-08-16 07:11:13] [SUCESSO] Total liberado em temporários: 0.0 MB
+[2026-08-16 07:11:13] [INFO] 
+📁 2. Limpando caches...
+[2026-08-16 07:11:13] [INFO] Iniciando limpeza de caches...
+[2026-08-16 07:11:13] [INFO]   Cache de pré-carregamento: 0.0 MB
+[2026-08-16 07:11:13] [SUCESSO]     ✅ Liberado: 0.0 MB
+[2026-08-16 07:11:13] [SUCESSO] Total liberado em caches: 0.0 MB
+[2026-08-16 07:11:13] [INFO] 
+📁 3. Esvaziando lixeira...
+[2026-08-16 07:11:13] [INFO] Esvaziando lixeira...
+[2026-08-16 07:11:13] [SUCESSO] ✅ Lixeira esvaziada!
+[2026-08-16 07:11:13] [INFO] 
+📁 4. Limpando cache do pip...
+[2026-08-16 07:11:13] [INFO] Limpando cache do pip em: e:\cleanup_manager.py\.venv
+[2026-08-16 07:11:13] [SUCESSO] ✅ Cache do pip limpo!
+[2026-08-16 07:11:13] [SUCESSO] ✅ Removidos 36 diretórios __pycache__
+[2026-08-16 07:11:13] [INFO] 
+📁 5. Removendo pacotes não usados...
+[2026-08-16 07:11:13] [INFO] Removendo pacotes não usados...
+[2026-08-16 07:11:14] [SUCESSO] ✅ Removidos 0 pacotes!
+[2026-08-16 07:11:14] [INFO] 
+📁 6. Limpando Downloads antigos...
+[2026-08-16 07:11:14] [INFO] Removendo arquivos com mais de 30 dias da pasta Downloads...
+[2026-08-16 07:11:14] [SUCESSO] ✅ Removidos 0 arquivos (0.0 MB liberados)
+[2026-08-16 07:11:14] [INFO] 
+==================================================
+[2026-08-16 07:11:14] [SUCESSO] ✅ LIMPEZA CONCLUÍDA!
+[2026-08-16 07:11:14] [SUCESSO] 💾 Total liberado: 0.0 MB
+[2026-08-16 07:11:14] [INFO] ==================================================
+[2026-08-16 07:11:23] [INFO] ==================================================
+[2026-08-16 07:11:23] [LIMPEZA] 🚀 INICIANDO LIMPEZA COMPLETA
+[2026-08-16 07:11:23] [INFO] ==================================================
+[2026-08-16 07:11:23] [INFO] 
+📁 1. Limpando arquivos temporários...
+[2026-08-16 07:11:23] [INFO] Iniciando limpeza de arquivos temporários...
+[2026-08-16 07:11:23] [INFO]   Temp do usuário: 21.7 MB
+[2026-08-16 07:11:23] [SUCESSO]     ✅ Liberado: 0.0 MB
+[2026-08-16 07:11:23] [INFO]   Temp do Windows: 0.0 MB
+[2026-08-16 07:11:23] [SUCESSO]     ✅ Liberado: 0.0 MB
+[2026-08-16 07:11:23] [SUCESSO] Total liberado em temporários: 0.0 MB
+[2026-08-16 07:11:23] [INFO] 
+📁 2. Limpando caches...
+[2026-08-16 07:11:23] [INFO] Iniciando limpeza de caches...
+[2026-08-16 07:11:23] [INFO]   Cache de pré-carregamento: 0.0 MB
+[2026-08-16 07:11:23] [SUCESSO]     ✅ Liberado: 0.0 MB
+[2026-08-16 07:11:23] [SUCESSO] Total liberado em caches: 0.0 MB
+[2026-08-16 07:11:23] [INFO] 
+📁 3. Esvaziando lixeira...
+[2026-08-16 07:11:23] [INFO] Esvaziando lixeira...
+[2026-08-16 07:11:23] [SUCESSO] ✅ Lixeira esvaziada!
+[2026-08-16 07:11:23] [INFO] 
+📁 4. Limpando cache do pip...
+[2026-08-16 07:11:23] [INFO] Limpando cache do pip em: e:\cleanup_manager.py\.venv
+[2026-08-16 07:11:23] [SUCESSO] ✅ Cache do pip limpo!
+[2026-08-16 07:11:23] [SUCESSO] ✅ Removidos 20 diretórios __pycache__
+[2026-08-16 07:11:23] [INFO] 
+📁 5. Removendo pacotes não usados...
+[2026-08-16 07:11:23] [INFO] Removendo pacotes não usados...
+[2026-08-16 07:11:23] [SUCESSO] ✅ Removidos 0 pacotes!
+[2026-08-16 07:11:23] [INFO] 
+📁 6. Limpando Downloads antigos...
+[2026-08-16 07:11:23] [INFO] Removendo arquivos com mais de 30 dias da pasta Downloads...
+[2026-08-16 07:11:23] [SUCESSO] ✅ Removidos 0 arquivos (0.0 MB liberados)
+[2026-08-16 07:11:23] [INFO] 
+==================================================
+[2026-08-16 07:11:23] [SUCESSO] ✅ LIMPEZA CONCLUÍDA!
+[2026-08-16 07:11:23] [SUCESSO] 💾 Total liberado: 0.0 MB
+[2026-08-16 07:11:23] [INFO] ==================================================

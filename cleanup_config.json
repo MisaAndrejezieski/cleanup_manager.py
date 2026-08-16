@@ -1,0 +1,25 @@
+{
+  "modo_agressivo": true,
+  "limpar_cache_pip": true,
+  "remover_pycache": true,
+  "remover_arquivos_temp": true,
+  "esvaziar_lixeira": true,
+  "limpar_prefetch": true,
+  "remover_pacotes_nao_usados": true,
+  "limpar_downloads": true,
+  "dias_para_limpar": 30,
+  "proteger_pacotes": [
+    "pip",
+    "setuptools",
+    "wheel",
+    "virtualenv",
+    "pipenv",
+    "poetry"
+  ],
+  "pasta_ignoradas": [
+    "node_modules",
+    ".git",
+    "__pycache__",
+    ".pytest_cache"
+  ]
+}
