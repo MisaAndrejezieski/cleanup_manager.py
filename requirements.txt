@@ -1,22 +1,2 @@
-# requirements.txt - Dependências do Cleanup Manager com GUI
-# Versão: 5.0 - Interface Gráfica
-# Data: 2026-08-16
-
-# ============================================
-# Interface Gráfica (Obrigatório)
-# ============================================
 customtkinter>=5.2.0
 pillow>=10.0.0
-
-# ============================================
-# Utilitários (Opcional - já vem com Python)
-# ============================================
-# Estas bibliotecas já vem com o Python:
-# - os, sys, subprocess, shutil, json, threading
-# - datetime, pathlib, platform, re, glob
-# - tkinter (já vem com Python)
-
-# ============================================
-# Para melhor gerenciamento de pacotes (Opcional)
-# ============================================
-# pip-autoremove>=1.0.0  # Para remoção inteligente de dependências
