@@ -1,0 +1,133 @@
+# ─────────────────────────────────────────
+# Python
+# ─────────────────────────────────────────
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+share/python-wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# ─────────────────────────────────────────
+# Ambientes virtuais
+# ─────────────────────────────────────────
+.venv/
+venv/
+ENV/
+env/
+.env
+.conda/
+
+# ─────────────────────────────────────────
+# pip / empacotamento
+# ─────────────────────────────────────────
+.pip/
+pip-log.txt
+pip-delete-this-directory.txt
+*.whl
+
+# ─────────────────────────────────────────
+# Testes / cobertura
+# ─────────────────────────────────────────
+.tox/
+.nox/
+.coverage
+.coverage.*
+.cache
+.pytest_cache/
+.hypothesis/
+htmlcov/
+coverage.xml
+*.cover
+
+# ─────────────────────────────────────────
+# Type checkers / linters
+# ─────────────────────────────────────────
+.mypy_cache/
+.dmypy.json
+dmypy.json
+.ruff_cache/
+.pytype/
+.pyre/
+
+# ─────────────────────────────────────────
+# Jupyter / IPython
+# ─────────────────────────────────────────
+.ipynb_checkpoints/
+profile_default/
+ipython_config.py
+
+# ─────────────────────────────────────────
+# Logs e saída do seu projeto
+# ─────────────────────────────────────────
+cleanup_log.txt
+*.log
+logs/
+
+# ─────────────────────────────────────────
+# Config local (não versionar)
+# ─────────────────────────────────────────
+cleanup_config.local.json
+config.local.json
+*.local.json
+
+# ─────────────────────────────────────────
+# IDEs e editores
+# ─────────────────────────────────────────
+.vscode/
+!.vscode/settings.json
+!.vscode/extensions.json
+!.vscode/launch.json
+.idea/
+*.swp
+*.swo
+*~
+.project
+.pydevproject
+.settings/
+
+# ─────────────────────────────────────────
+# Sistema operacional
+# ─────────────────────────────────────────
+# Windows
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+*.lnk
+
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+._*
+
+# Linux
+*~
+.directory
+.Trash-*
+
+# ─────────────────────────────────────────
+# Backup e temporários
+# ─────────────────────────────────────────
+*.bak
+*.tmp
+*.temp
+*.orig
+*.rej
